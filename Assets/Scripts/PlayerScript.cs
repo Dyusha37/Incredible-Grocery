@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] GameObject ShoperGame;
+    [SerializeField] GameObject scoreObject;
+    [SerializeField] GameObject shopperObject;
     [SerializeField] GameObject emptySprite;
     [SerializeField] Sprite right;
     [SerializeField] Sprite notRight;
-    [SerializeField] GameObject mind;
+    [SerializeField] GameObject orderTransform;
     [SerializeField] GameObject orderPrefab;
     [SerializeField] AudioSource bubbleAppered;
     [SerializeField] AudioSource bubbleDisppered;
@@ -18,15 +19,15 @@ public class PlayerScript : MonoBehaviour
     List<GameObject> SelectedItems;
     List<GameObject> OrderItems;
     GameObject[] sceneOrderList;
-    GameObject ordered;
-    GameObject sceneEmptySprite;
+    GameObject orderInstantiated;
+    GameObject emptySpriteInstantiated;
     ShopperScript shopper;
     Vector3 scale = new Vector3(0.7f, 0.7f, 1);
     ScoreController score;
     public void StartWork(List<GameObject> seelctedItems)
     {
-        score = FindObjectOfType<ScoreController>();
-        shopper = ShoperGame.GetComponent<ShopperScript>();
+        score = scoreObject.GetComponent<ScoreController>();
+        shopper = shopperObject.GetComponent<ShopperScript>();
         OrderItems = new List<GameObject>(shopper.GetOrder());
         SelectedItems = new List<GameObject>(seelctedItems);
         SayOrder();
@@ -36,7 +37,7 @@ public class PlayerScript : MonoBehaviour
     private void SayOrder()
     {
         bubbleAppered.Play();
-        ordered = Instantiate(orderPrefab, mind.transform.position, Quaternion.identity);
+        orderInstantiated = Instantiate(orderPrefab, orderTransform.transform.position, Quaternion.identity);
         sceneOrderList = new GameObject[SelectedItems.Count];
         for (int i = 0; i < SelectedItems.Count; i++)
         {
@@ -65,11 +66,11 @@ public class PlayerScript : MonoBehaviour
     private void SetOrderParent(int i)
     {
         sceneOrderList[i] = Instantiate(SelectedItems[i]) as GameObject;
-        sceneOrderList[i].transform.parent = ordered.transform;
+        sceneOrderList[i].transform.parent = orderInstantiated.transform;
         sceneOrderList[i].transform.localScale = scale;
-        sceneEmptySprite= Instantiate(emptySprite, sceneOrderList[i].transform) as GameObject;
-        sceneEmptySprite.transform.parent = sceneOrderList[i].transform;
-        sceneEmptySprite.transform.localScale = scale;
+        emptySpriteInstantiated= Instantiate(emptySprite, sceneOrderList[i].transform) as GameObject;
+        emptySpriteInstantiated.transform.parent = sceneOrderList[i].transform;
+        emptySpriteInstantiated.transform.localScale = scale;
     }
 
     IEnumerator Checkout()
@@ -96,7 +97,7 @@ public class PlayerScript : MonoBehaviour
         yield return new WaitForSeconds(1f);
         allRight = OrderItems.Count == rightCount&& OrderItems.Count==SelectedItems.Count;
         bubbleDisppered.Play();
-        Destroy(ordered);
+        Destroy(orderInstantiated);
         if (allRight)
         {
             monyeSound.Play();

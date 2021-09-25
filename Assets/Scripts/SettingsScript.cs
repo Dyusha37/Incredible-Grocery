@@ -9,17 +9,16 @@ public class SettingsScript : MonoBehaviour
     [SerializeField] GameObject musicButton;
     [SerializeField] Text soundText;
     [SerializeField] Text musicText;
-    [SerializeField] Sprite itemOn;
-    [SerializeField] Sprite itemOff;
+    [SerializeField] Sprite buttonOn;
+    [SerializeField] Sprite buttonOff;
     [SerializeField] AudioMixerGroup mixer;
     [SerializeField] AudioSource buttonClick;
-    PlayerPrefsController playerPrefs;
+    [SerializeField] PlayerPrefsController playerPrefs;
     bool soundsOn;
     bool musicOn;
 
     void Start()
     {
-        playerPrefs = FindObjectOfType<PlayerPrefsController>();
         soundsOn = playerPrefs.GetSound();
         musicOn = playerPrefs.GetMusic();
         SetMusic();
@@ -76,7 +75,7 @@ public class SettingsScript : MonoBehaviour
     private void SetImage(GameObject button, Text buttonText,bool param)
     {
         buttonText.text = param ? "On" : "Off";
-        button.GetComponent<Image>().sprite = param ? itemOn : itemOff;
+        button.GetComponent<Image>().sprite = param ? buttonOn : buttonOff;
     }
 
 }

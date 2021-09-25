@@ -351,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &287064440
 GameObject:
@@ -712,10 +713,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefbeb0b4d61ec145810c2dd6ea99115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mind: {fileID: 1794901635}
+  orderTransform: {fileID: 1794901635}
   orderPrefab: {fileID: 1784816503348160872, guid: 62357b2d4582d3946bbe72307b8222c5, type: 3}
-  good: {fileID: 5931150833109291574, guid: 5ee17d2a5e1f55548b6c5e2c01c7e5e2, type: 3}
-  bad: {fileID: 3202095908272790672, guid: 8e3a392facd9bea449a5983b028fe78c, type: 3}
+  goodResult: {fileID: 5931150833109291574, guid: 5ee17d2a5e1f55548b6c5e2c01c7e5e2, type: 3}
+  badResult: {fileID: 3202095908272790672, guid: 8e3a392facd9bea449a5983b028fe78c, type: 3}
   bubbleAppered: {fileID: 461464925}
   bubbleDisppered: {fileID: 461464924}
 --- !u!82 &461464924
@@ -1055,6 +1056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &492799632
 GameObject:
@@ -1280,6 +1282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1001 &591458684
 PrefabInstance:
@@ -1565,6 +1568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &843276946
 GameObject:
@@ -1711,6 +1715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &877546142
 GameObject:
@@ -1857,6 +1862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &889942008
 GameObject:
@@ -2003,6 +2009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &902012080
 GameObject:
@@ -2261,6 +2268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1149696928
 GameObject:
@@ -2543,6 +2551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1237858213
 GameObject:
@@ -2643,10 +2652,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6dbb634bd250b4b9498b2ff396b52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreObject: {fileID: 1979782493}
+  shopperObject: {fileID: 461464919}
   emptySprite: {fileID: 1290724071061973163, guid: ba34b98e8596a7d45beae59763bf74b4, type: 3}
   right: {fileID: 21300000, guid: f39f0d19d9bee274492154120bf8e891, type: 3}
   notRight: {fileID: 21300000, guid: 702166d2897d34240a310dcf225b3b92, type: 3}
-  mind: {fileID: 998289863}
+  orderTransform: {fileID: 998289863}
   orderPrefab: {fileID: 1784816503348160872, guid: 62357b2d4582d3946bbe72307b8222c5, type: 3}
   bubbleAppered: {fileID: 1237858219}
   bubbleDisppered: {fileID: 1237858218}
@@ -3084,6 +3095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1389983002
 GameObject:
@@ -3230,6 +3242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1425511686
 GameObject:
@@ -3376,6 +3389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1532671025
 GameObject:
@@ -3655,6 +3669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1557696841
 GameObject:
@@ -3974,6 +3989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1932e031afdb964449743524cdea8551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   sellButton: {fileID: 1532671027}
   itemSelected: {fileID: 1557696847}
   buttonClick: {fileID: 1557696846}
@@ -4143,6 +4159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1669422467
 GameObject:
@@ -4289,6 +4306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1683573285
 GameObject:
@@ -4435,6 +4453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1694361791
 GameObject:
@@ -4660,6 +4679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1705767903
 GameObject:
@@ -4806,6 +4826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1784556055
 GameObject:
@@ -4952,6 +4973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1794901635
 GameObject:
@@ -5128,6 +5150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cd5b5ebdb17f54685be8ac7a7d4d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopperObject: {fileID: 461464919}
   selected: {fileID: 3251371506099325876, guid: d5a2a481f3ba6e44c8fe8f1d8110ba68, type: 3}
 --- !u!1 &1811625147
 GameObject:

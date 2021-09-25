@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
+    [SerializeField] GameObject shopperObject;
     [SerializeField] Button sellButton;
     [SerializeField] AudioSource itemSelected;
     [SerializeField] AudioSource buttonClick;
@@ -14,7 +15,7 @@ public class Controller : MonoBehaviour
     ShopperScript shopper;
     void Start()
     {
-        shopper = FindObjectOfType<ShopperScript>();
+        shopper = shopperObject.GetComponent<ShopperScript>();
     }
 
     public List<GameObject> GetMenu()

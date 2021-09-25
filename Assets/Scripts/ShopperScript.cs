@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ShopperScript : MonoBehaviour
 {
-    [SerializeField] GameObject mind;
+    [SerializeField] GameObject orderTransform;
     [SerializeField] GameObject orderPrefab;
-    [SerializeField] GameObject good;
-    [SerializeField] GameObject bad;
+    [SerializeField] GameObject goodResult;
+    [SerializeField] GameObject badResult;
     [SerializeField] AudioSource bubbleAppered;
     [SerializeField] AudioSource bubbleDisppered;
     GameObject result;
-    GameObject ordered;
+    GameObject orderInstantiated;
     List<GameObject> orderList;
     GameObject[] scaneOrderArray;
     Animator animator;
@@ -30,7 +30,7 @@ public class ShopperScript : MonoBehaviour
     }
     public void MakeOrder()
     {
-        ordered = Instantiate(orderPrefab,mind.transform.position,Quaternion.identity);
+        orderInstantiated = Instantiate(orderPrefab,orderTransform.transform.position,Quaternion.identity);
         bubbleAppered.Play();
         CreateOrder();
     }
@@ -79,7 +79,7 @@ public class ShopperScript : MonoBehaviour
     }
     private void SetOrderParent(GameObject item)
     {
-        item.transform.parent = ordered.transform;
+        item.transform.parent = orderInstantiated.transform;
         item.transform.localScale = scale;
     }
     public List<GameObject> GetOrder()
@@ -89,14 +89,14 @@ public class ShopperScript : MonoBehaviour
     public void SetResult(bool res)
     {
         bubbleAppered.Play();
-        ordered.SetActive(true);
+        orderInstantiated.SetActive(true);
         if (res)
         {
-            result = Instantiate(good) as GameObject;
+            result = Instantiate(goodResult) as GameObject;
         }
         else
         {
-            result = Instantiate(bad) as GameObject;
+            result = Instantiate(badResult) as GameObject;
         }
         SetOrderParent(result);
         result.transform.localPosition = new Vector3(0, 0.25f, 0);
@@ -110,7 +110,7 @@ public class ShopperScript : MonoBehaviour
             Destroy(item);
         }
         bubbleDisppered.Play();
-        ordered.SetActive(false);
+        orderInstantiated.SetActive(false);
         selector.ShowOnScreen();
     }
     IEnumerator Exit()
@@ -121,6 +121,6 @@ public class ShopperScript : MonoBehaviour
     public void DestroyOrdered()
     {
         bubbleDisppered.Play();
-        Destroy(ordered);
+        Destroy(orderInstantiated);
     }
 }

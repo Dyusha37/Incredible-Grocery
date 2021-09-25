@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Selector : MonoBehaviour
 {
     [SerializeField] float speed = 1;
-    private Vector3 startPos;
-    private Vector3 endPos;
+    Vector3 startPos;
+    Vector3 endPos;
     private void Start()
     {
         startPos = transform.position;

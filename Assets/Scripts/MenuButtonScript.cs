@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MenuButtonScript : MonoBehaviour
 {
+    [SerializeField] GameObject shopperObject;
     [SerializeField] GameObject selected;
     GameObject selectedShow; 
     ShopperScript shopper;
@@ -12,8 +13,8 @@ public class MenuButtonScript : MonoBehaviour
     bool notSelected = true;
     private void Start()
     {
-        shopper = FindObjectOfType<ShopperScript>();
-        controller = FindObjectOfType<Controller>();
+        shopper = shopperObject.GetComponent<ShopperScript>();
+        controller = transform.parent.gameObject.GetComponent<Controller>();
     }
     public void Add(GameObject item)
     {
